@@ -69,3 +69,14 @@ prevButton.addEventListener('click', prevSlide);
 
 // Optional: Add automatic sliding
 // setInterval(nextSlide, 3000);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
+  const navbar = document.querySelector(".navbar");
+
+  if (navToggleBtn && navbar) {
+    navToggleBtn.addEventListener("click", () => {
+      navbar.classList.toggle("active");
+    });
+  }
+});
