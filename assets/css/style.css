@@ -882,9 +882,9 @@ textarea.contact-input {
     column-gap: 50px;
   }
 
-  /* Hide nav-toggle-btn on larger screens if necessary */
+  /* Ensure nav-toggle-btn is always visible */
   .nav-toggle-btn {
-    display: none; /* Hide the button on larger screens */
+    display: block; /* Keep the button visible */
   }
 }
 
@@ -1254,5 +1254,3 @@ textarea.contact-input {
     margin-inline: 0;
   }
 }
-
-
