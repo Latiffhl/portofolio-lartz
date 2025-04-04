@@ -305,7 +305,7 @@ body {
   padding-inline: 20px;
   visibility: hidden;
   opacity: 0;
-  transition: var(--transition-2);
+  transition: visibility 0.3s, opacity 0.3s ease-in-out;
 }
 
 .header.nav-active .navbar {
@@ -1254,3 +1254,5 @@ textarea.contact-input {
     margin-inline: 0;
   }
 }
+
+
