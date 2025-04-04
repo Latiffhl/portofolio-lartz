@@ -72,11 +72,11 @@ prevButton.addEventListener('click', prevSlide);
 
 document.addEventListener("DOMContentLoaded", () => {
   const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
-  const navbar = document.querySelector(".navbar");
+  const header = document.querySelector("[data-header]");
 
-  if (navToggleBtn && navbar) {
+  if (navToggleBtn && header) {
     navToggleBtn.addEventListener("click", () => {
-      navbar.classList.toggle("active");
+      header.classList.toggle("nav-active");
     });
   }
 });
