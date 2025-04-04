@@ -3,7 +3,7 @@
 \*-----------------------------------*/
 
 /**
- * copyright 2025 lartz
+ * copyright 2022 codewithsadee
  */
 
 /*-----------------------------------*\
@@ -276,6 +276,11 @@ body {
 
 .nav-toggle-btn {
   font-size: 3rem;
+  display: block; /* Make the button visible */
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
 }
 
 .nav-toggle-btn .close-icon,
@@ -296,7 +301,7 @@ body {
   padding-inline: 20px;
   visibility: hidden;
   opacity: 0;
-  transition: var(--transition-2);
+  transition: visibility 0.3s, opacity 0.3s ease-in-out;
 }
 
 .header.nav-active .navbar {
