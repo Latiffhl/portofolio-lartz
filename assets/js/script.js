@@ -70,13 +70,32 @@ prevButton.addEventListener('click', prevSlide);
 // Optional: Add automatic sliding
 // setInterval(nextSlide, 3000);
 
-document.addEventListener("DOMContentLoaded", () => {
-  const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
-  const header = document.querySelector("[data-header]");
+document.addEventListener('DOMContentLoaded', () => {
+  const navToggleBtn = document.querySelector('[data-nav-toggle-btn]');
+  const header = document.querySelector('[data-header]');
 
   if (navToggleBtn && header) {
-    navToggleBtn.addEventListener("click", () => {
-      header.classList.toggle("nav-active");
+    navToggleBtn.addEventListener('click', () => {
+      header.classList.toggle('nav-active');
     });
   }
+
+  // Close navbar when a link is clicked
+  const navbarLinks = document.querySelectorAll('[data-nav-link]');
+  navbarLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      header.classList.remove('nav-active');
+      navToggleBtn.classList.remove('active');
+    });
+  });
+});
+
+// Ensure all images are loaded correctly
+window.addEventListener('load', () => {
+  const images = document.querySelectorAll('img');
+  images.forEach((img) => {
+    img.onerror = () => {
+      console.error(`Image failed to load: ${img.src}`);
+    };
+  });
 });
