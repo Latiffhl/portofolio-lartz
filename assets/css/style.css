@@ -3,7 +3,7 @@
 \*-----------------------------------*/
 
 /**
- * copyright 2022 codewithsadee
+ * copyright 2025 lartz
  */
 
 /*-----------------------------------*\
@@ -278,15 +278,6 @@ body {
   font-size: 3rem;
 }
 
-/* Ensure nav-toggle-btn is visible on small screens */
-.nav-toggle-btn {
-  display: block; /* Ensure the button is visible */
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 1000;
-}
-
 .nav-toggle-btn .close-icon,
 .nav-toggle-btn.active .menu-icon {
   display: none;
@@ -305,7 +296,7 @@ body {
   padding-inline: 20px;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0.3s, opacity 0.3s ease-in-out;
+  transition: var(--transition-2);
 }
 
 .header.nav-active .navbar {
@@ -347,6 +338,11 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
+}
+
+/* Remove hero-bg.jpg for business.html */
+body#top.business-page .hero {
+  background-image: none; /* Remove the background image */
 }
 
 .hero-banner {
@@ -836,6 +832,22 @@ textarea.contact-input {
   background-color: var(--white);
 }
 
+/* Back to Home Button */
+.back-home-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  color: var(--orange-soda);
+  font-size: 3rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.back-home-btn:hover {
+  color: hsl(7, 96%, 50%); /* Slightly darker shade of --orange-soda */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
@@ -880,11 +892,6 @@ textarea.contact-input {
   .blog-list {
     grid-template-columns: 1fr 1fr;
     column-gap: 50px;
-  }
-
-  /* Ensure nav-toggle-btn is always visible */
-  .nav-toggle-btn {
-    display: block; /* Keep the button visible */
   }
 }
 
