@@ -278,6 +278,15 @@ body {
   font-size: 3rem;
 }
 
+/* Ensure nav-toggle-btn is visible on small screens */
+.nav-toggle-btn {
+  display: block; /* Ensure the button is visible */
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
 .nav-toggle-btn .close-icon,
 .nav-toggle-btn.active .menu-icon {
   display: none;
@@ -871,6 +880,11 @@ textarea.contact-input {
   .blog-list {
     grid-template-columns: 1fr 1fr;
     column-gap: 50px;
+  }
+
+  /* Hide nav-toggle-btn on larger screens if necessary */
+  .nav-toggle-btn {
+    display: none; /* Hide the button on larger screens */
   }
 }
 
