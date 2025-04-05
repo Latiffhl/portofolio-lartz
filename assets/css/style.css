@@ -3,7 +3,7 @@
 \*-----------------------------------*/
 
 /**
- * copyright 2022 codewithsadee
+ * copyright 2025 lartz
  */
 
 /*-----------------------------------*\
@@ -276,10 +276,11 @@ body {
 
 .nav-toggle-btn {
   font-size: 3rem;
-  display: block; /* Make the button visible */
+  display: block;
   position: absolute;
-  top: 1rem;
+  top: 50%; /* Center vertically */
   right: 1rem;
+  transform: translateY(-50%); /* Adjust for centering */
   z-index: 1000;
 }
 
