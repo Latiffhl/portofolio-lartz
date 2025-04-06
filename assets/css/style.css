@@ -325,7 +325,16 @@ body {
   background-color: var(--orange-soda);
   margin-block-start: 15px;
 }
+/* UNUTUK NOTIFIKASI CV */
 
+#topNotification {
+  transform: translateY(-100%); /* Awalnya berada di atas layar */
+  transition: transform 1s ease-in-out;
+}
+
+#topNotification.show {
+  transform: translateY(0); /* Setelah kelas 'show' ditambahkan, notifikasi akan terlihat */
+}
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
@@ -481,6 +490,10 @@ body#top.business-page .hero {
 .portfolio-card .btn-link ion-icon {
   color: var(--orange-soda);
   font-size: 1.6rem;
+}
+
+.portfolio-card .card-content {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add shadow to text */
 }
 
 /*-----------------------------------*\
