@@ -98,15 +98,13 @@
 
                   topNotification.classList.add('show');
                   topNotification.style.display = 'block';
-
-                  // Setelah beberapa detik, sembunyikan notifikasi (opsional)
+ 
                   setTimeout(function () {
                     topNotification.classList.remove('show');
-                    setTimeout(function () {
-                      // Tambahkan sedikit delay agar transisi selesai sebelum display diubah
+                    setTimeout(function () 
                       topNotification.style.display = 'none';
-                    }, 300); // Sesuaikan dengan durasi transisi
-                  }, 3000); // Notifikasi akan hilang setelah 3 detik (bisa disesuaikan)
+                    }, 300); 
+                  }, 3000); 
                 });
               });
             </script>
