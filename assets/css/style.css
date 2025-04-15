@@ -327,13 +327,25 @@ body {
 }
 /* UNUTUK NOTIFIKASI CV */
 
-#topNotification {
-  transform: translateY(-100%); /* Awalnya berada di atas layar */
-  transition: transform 1s ease-in-out;
+.top-notification-card {
+  position: fixed;
+  top: -100px; /* disembunyikan awalnya */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--orange-soda, #ff5e3a);
+  color: white;
+  padding: 16px 24px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  z-index: 9999;
+  opacity: 0;
+  transition: top 0.5s ease, opacity 0.5s ease;
 }
 
-#topNotification.show {
-  transform: translateY(0); /* Setelah kelas 'show' ditambahkan, notifikasi akan terlihat */
+.top-notification-card.show {
+  top: 30px;
+  opacity: 1;
 }
 /*-----------------------------------*\
   #HERO
