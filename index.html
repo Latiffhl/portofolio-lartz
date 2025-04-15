@@ -78,9 +78,8 @@
               <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
             </li>
             <!-- DOWNLOAD CV -->
-            <div id="topNotification" style="display: none; position: fixed; top: 0; left: 0; width: 100%; background-color: white; color: black; text-align: center; padding: 15px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); z-index: 1000">
-              <span style="font-size: 1.2em; margin-right: 10px">😊</span>
-              <p style="margin: 0; display: inline">Maaf, CV masih bersifat pribadi.</p>
+            <div id="topNotification" class="top-notification-card">
+              <p>CV Masih Bersifat Pribadi! 😱</p>
             </div>
 
             <li>
@@ -88,7 +87,6 @@
             </li>
 
             <script>
-              // NOTIFIKASI CV
               document.addEventListener('DOMContentLoaded', function () {
                 const downloadCvBtn = document.getElementById('downloadCvBtn');
                 const topNotification = document.getElementById('topNotification');
@@ -97,14 +95,10 @@
                   event.preventDefault();
 
                   topNotification.classList.add('show');
-                  topNotification.style.display = 'block';
- 
+
                   setTimeout(function () {
                     topNotification.classList.remove('show');
-                    setTimeout(function () 
-                      topNotification.style.display = 'none';
-                    }, 300); 
-                  }, 3000); 
+                  }, 3000);
                 });
               });
             </script>
