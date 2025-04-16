@@ -67,7 +67,6 @@ function prevSlide() {
 nextButton.addEventListener('click', nextSlide);
 prevButton.addEventListener('click', prevSlide);
 
-// Optional: Add automatic sliding
 // setInterval(nextSlide, 3000);
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -90,7 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Ensure all images are loaded correctly
 window.addEventListener('load', () => {
   const images = document.querySelectorAll('img');
   images.forEach((img) => {
